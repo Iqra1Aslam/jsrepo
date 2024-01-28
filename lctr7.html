@@ -1,0 +1,32 @@
+<html>
+<body>
+<button id="btn">  click  me</button>
+<p id="para">hi</p>
+<script>
+let btn=document.querySelector("#btn");
+let currMode="light";
+btn.addEventListener("click",()=>{
+	if(currMode==="light")
+	{
+
+         currMode="dark";
+		document.querySelector("body").style.backgroundColor="black";
+		let para=document.querySelector("#para");
+		para.style.fontSize='80px';
+		para.style.color="white";
+		para.style.textAlign="center";
+		para.innerText=`Hi ${currMode} mode`;
+	}
+	else{
+		currMode="light";
+		document.querySelector("#para");
+		para.style.color="black";
+		para.style.fontSize='80px';
+		para.style.textAlign="center";
+		para.innerText=`Hi ${currMode} mode`;
+		document.querySelector("body").style.backgroundColor="white";
+	}
+});
+</script>
+</body>
+</html>
